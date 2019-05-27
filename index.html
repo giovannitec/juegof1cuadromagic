@@ -166,11 +166,22 @@ color: #e9cdff;
 #idjuego{
     position: absolute;
     top: 0%;
-    left: 20%;
-    width: 60%;
+    left: 30%;
+    width: 40%;
     height: 100%;
     background-color: #368ac2
 }
+
+#idmiaduio{
+    position: absolute;
+    top:5%;
+    left: 80%;
+
+z-index: 21;
+
+
+}
+
 
 		</style>
 	</head>
@@ -258,7 +269,7 @@ color: #e9cdff;
                 <audio id="myAudio">
     
                         <source src="son.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
+                     
                       </audio>
 
     </div>
@@ -456,7 +467,27 @@ empezarDetener();
 
 console.log(vnum);
 
-var xaudio = document.getElementById("myAudio"); 
+
+//audio.play();
+        </script>
+        
+        <audio id="audiotag1" src="son.mp3" preload="auto"></audio>
+        <a href="javascript:play_single_sound();">Play 5-sec sound on single channel</a>
+        <script type="text/javascript">
+            function play_single_sound() {
+                document.getElementById('audiotag1').play();
+            }
+        
+        </script>
+
+<audio id="idmiaduio" controls>
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="son.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+
+<script>
+var xaudio = document.getElementById("idmiaduio"); 
 
 function playAudio() { 
     xaudio.play(); 
@@ -467,7 +498,11 @@ function pauseAudio() {
     xaudio.pause(); 
 }
 playAudio();
+var audio = new Audio('son.mp3');
 
-		</script>
+
+
+</script>
+
 	</body>
 </html>
