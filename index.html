@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>My first three.js app</title>
+		<style>
+    
+    
+
+    #idcontendortabla{
+position: absolute;
+top: 30%;
+left: 20%;
+width: 60%;
+
+height: 30%;
+background-color: black;
+
+z-index: 7;
+
+    }
+
+   .clinput{   z-index: 6;
+
+position: relative;
+width: 100%;
+height: 100%;
+font-size: 19px;
+text-align: center;
+-webkit-border-radius: 40px 40px 40px 40px;
+-moz-border-radius: 40px 40px 40px 40px;
+border-radius: 40px 40px 40px 40px;
+
+    }
+
+#menubt{
+    z-index: 6;
+    position: absolute;
+top: 61.0%;
+left: 20%;
+width: 60%;
+
+height: 8%;
+background-color: black;
+display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+}
+
+
+
+
+
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #efdcfb;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #efdcfb;
+	box-shadow:inset 0px 1px 0px 0px #efdcfb;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfbdfa), color-stop(1, #bc80ea));
+	background:-moz-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+	background:-webkit-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+	background:-o-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+	background:-ms-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfbdfa', endColorstr='#bc80ea',GradientType=0);
+	background-color:#dfbdfa;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #c584f3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #9752cc;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc80ea), color-stop(1, #dfbdfa));
+	background:-moz-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+	background:-webkit-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+	background:-o-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+	background:-ms-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc80ea', endColorstr='#dfbdfa',GradientType=0);
+	background-color:#bc80ea;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+#idgane{
+    z-index: 12;
+    position: absolute;
+top: 30%;
+left: 20%;
+width: 60%;
+
+height: 50%;
+background-color: black;
+
+  opacity: 0.7;
+}
+.crono_wrapper{   z-index: 3;
+
+position: relative;
+
+top: 20%;
+left: 30%;
+height: 50%;
+width: 60%;
+color: #ffffff;
+}
+#idp{
+    z-index: 4;
+    position: absolute;
+
+    top: 5%;
+    left:30%;
+    text-align: center;
+    color: #9752cc;
+}
+#ih3{
+position: absolute;
+top:15%;
+left: 0%;
+width: 100%;
+height: 5%;
+
+text-align: center;
+margin:auto;
+padding: 5px;
+z-index: 3;
+color: #e9cdff;
+}
+
+#idimgfondo{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#todo{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #f6edfd
+}
+
+
+#idjuego{
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    width: 60%;
+    height: 100%;
+    background-color: #368ac2
+}
+
+		</style>
+	</head>
+	<body>
+
+
+<div id="todo">
+
+
+
+    <div id="idjuego">
+
+
+
+
+            <img id="idimgfondo" src="https://media2.giphy.com/media/Kt9jCoXC6s1eo/giphy.webp?cid=790b76115cec5fd86c706c59554b91c1&rid=giphy.webp" alt="">
+          
+            <h1 id="ih3">CUADRO  MAGICO</h1>
+            
+            
+            
+                    <div id="idcontendortabla">
+                        
+                            <table id="idtable" style="width: 100%; height: 100%;" border="1">
+                                    <tbody>
+                                      <tr>
+                                        <td> <input class="clinput" id="id0" type="number">    
+                                        </td>
+                                        <td><input class="clinput" id="id1" type="number">
+                                        </td>
+                                        <td><input class="clinput" id="id2" type="number">
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><input class="clinput" id="id3" type="number">
+                                        </td>
+                                        <td><input class="clinput" id="id4" type="number">
+                                        </td>
+                                        <td><input class="clinput" id="id5" type="number">
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><input class="clinput" id="id6" type="number">
+                                        </td>
+                                        <td><input class="clinput" id="id7" type="number">
+                                        </td>
+                                        <td><input class="clinput" id="id8" type="number">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+            
+            
+            
+            
+            
+            
+            
+                    </div>
+            
+            
+                    <div id="menubt"><button class="myButton" onclick="btsolucion();" id="idbtsolucion">Resolver </button>
+                    
+                        <button class="myButton" onclick="verificar();" id="idbtsolucion">Terminado </button>
+                        <button class="myButton" onclick="fdenuevo();" id="idbtsolucion">De nuevo </button>
+                    </div>
+            
+            
+                   <div id="idgane"><p id="idp">En hora buena Ganaste <br>intentalo de  Nuevo</p>
+                
+                    <div class="crono_wrapper">
+                            <h2 id='crono'>00:00:00</h2>
+                         
+                        </div>
+            
+            
+                
+                </div> 
+
+
+
+
+
+
+                <audio id="myAudio">
+    
+                        <source src="son.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                      </audio>
+
+    </div>
+</div>
+
+
+		<script>
+
+var vnum=(getRandomInt(1, 100));
+
+
+document.getElementById("ih3").innerHTML="la suma de las diagonales , columnas y filas debe ser "+"<br>"
++String(vnum*(15));
+var arrayceldas=[];
+var arrayceldasreal=[];
+arrayceldas.push({vc:4,id:0,vcr:0});
+arrayceldas.push({vc:9,id:1,vcr:0});
+arrayceldas.push({vc:2,id:2,vcr:0});
+
+
+arrayceldas.push({vc:3,id:3,vcr:0});
+arrayceldas.push({vc:5,id:4,vcr:0});
+arrayceldas.push({vc:7,id:5,vcr:0});
+
+
+arrayceldas.push({vc:8,id:6,vcr:0});
+arrayceldas.push({vc:1,id:7,vcr:0});
+arrayceldas.push({vc:6,id:8,vcr:0});
+
+
+       
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+
+
+
+
+
+var  arrays=[];
+
+arrays.push(getRandomInt(0,9));
+arrays.push(getRandomInt(0, 9));
+arrays.push(getRandomInt(0,9));
+//arrays.push(getRandomInt(0, 9));
+
+
+
+
+
+for(var ii in arrayceldas){
+
+
+  document.getElementById("id"+String(arrayceldas[ii].id)).value="";
+
+}
+
+
+
+for(var i in arrayceldas){
+
+    arrayceldasreal.push({vcr:arrayceldas[i].vc*vnum,id:arrayceldas[i].id});
+}
+
+
+
+
+for(var i in arrays){
+for(var ii in arrayceldas){
+if(arrayceldas[ii].id==arrays[i]){
+
+    document.getElementById("id"+String(arrayceldas[ii].id)).value=arrayceldas[ii].vc*vnum;
+
+    document.getElementById("id"+String(arrayceldas[ii].id)).disabled = true;
+}
+else{
+  //  document.getElementById(String(arrayceldas[ii].id)).value="";
+}
+
+
+}
+	}		
+
+    function esingual(){
+
+    }
+
+
+    function btsolucion(){
+        for(var ii in arrayceldas){
+
+
+    document.getElementById("id"+String(arrayceldas[ii].id)).value=arrayceldas[ii].vc*vnum;
+
+    document.getElementById("id"+String(arrayceldas[ii].id)).disabled = true;
+}
+
+    }
+
+
+function fdenuevo(){
+    window.location.reload();
+}
+   
+
+var cambiargane=false;
+var  cuantovan=0;
+   function verificar(){
+    for(var ii in arrayceldas){
+if(document.getElementById("id"+String(arrayceldas[ii].id)).value==arrayceldasreal[ii].vcr){
+  // console.log(ii+ "   arrayceldasreal");
+    document.getElementById("id"+String(arrayceldas[ii].id)).style.color = "green";
+    cuantovan=cuantovan+1;
+}
+else{
+    document.getElementById("id"+String(arrayceldas[ii].id)).style.color = "red";
+    cuantovan=0;
+}
+if(cuantovan==9){cambiargane=true;
+document.getElementById("idgane").style.display="block";
+
+clearTimeout(timeout);
+			timeout=0;
+
+            setTimeout(function(){
+                window.location.reload();
+            },7000);
+}
+
+//document.getElementById("id"+String(arrayceldas[ii].id)).value=arrayceldas[ii].vc*vnum;
+
+//document.getElementById("id"+String(arrayceldas[ii].id)).disabled = true;
+}
+
+
+   }
+setInterval(function(){if(!cambiargane){verificar();}},200);
+
+document.getElementById("idgane").style.display="none";
+
+
+
+var inicio=0;
+	var timeout=0;
+
+empezarDetener();
+
+
+ 
+	function empezarDetener()
+	{
+		if(timeout==0)
+		{  
+			// empezar el cronometro
+ 
+		//	elemento.value="Detener";
+ 
+			// Obtenemos el valor actual
+			inicio=vuelta=new Date().getTime();
+ 
+			// iniciamos el proceso
+			funcionando();
+		}else{
+			// detemer el cronometro
+ 
+		//	elemento.value="Empezar";
+		//	clearTimeout(timeout);
+			//timeout=0;
+		}
+	}
+ 
+	function funcionando()
+	{
+		// obteneos la fecha actual
+		var actual = new Date().getTime();
+ 
+		// obtenemos la diferencia entre la fecha actual y la de inicio
+		var diff=new Date(actual-inicio);
+ 
+		// mostramos la diferencia entre la fecha actual y la inicial
+		var result=LeadingZero(diff.getUTCHours())+":"+LeadingZero(diff.getUTCMinutes())+":"+LeadingZero(diff.getUTCSeconds());
+		document.getElementById('crono').innerHTML = result;
+ 
+		// Indicamos que se ejecute esta función nuevamente dentro de 1 segundo
+		timeout=setTimeout("funcionando()",1000);
+	}
+ 
+	/* Funcion que pone un 0 delante de un valor si es necesario */
+	function LeadingZero(Time) {
+		return (Time < 10) ? "0" + Time : + Time;
+	}
+
+
+
+console.log(vnum);
+
+var xaudio = document.getElementById("myAudio"); 
+
+function playAudio() { 
+    xaudio.play(); 
+    xaudio.loop=true;
+} 
+
+function pauseAudio() { 
+    xaudio.pause(); 
+}
+playAudio();
+
+		</script>
+	</body>
+</html>
